@@ -1,0 +1,10 @@
+<div class="profile">
+  <p class="title">SPARTAN</p>
+  <div class="spartan-profile" *ngIf="spartanProfile && spartanProfile.length != 0">
+    <p class="spartan-name">[<span class="service-tag">{{spartanProfile.ServiceTag}}</span>] {{spartanProfile.Gamertag}}</p>
+    <p class="spartan-company-name" *ngIf="spartanProfile.Company">Company: {{spartanProfile.Company.Name}}</p>
+    <div id="spartanImages">
+      <!-- Images get automatically inserted as they are retrieved from the service -->
+    </div>
+  </div>
+</div>

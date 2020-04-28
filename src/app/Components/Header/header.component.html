@@ -1,0 +1,26 @@
+<div class="header">
+
+  <div class="spartan-info">
+    <div class="image-background"></div>
+    <div class="title">
+      {{title}}
+    </div>
+    <label for="gamerTag" class="gamertag-label">Gamertag:</label>
+    <input type="text" id="gamerTag" class="gamertag-button" [(ngModel)]="gamerTag" required>
+    <div class="actions">
+      <button class="btn btn-primary action-button" (click)="getSpartanInfo()" >
+        GO PROFILE
+      </button>
+      <button class="btn btn-primary action-button" (click)="getSpartanStats()" >
+        GO STATS
+      </button>
+      <button class="btn btn-primary action-button" (click)="getSpartanFight()" >
+        GO FIGHT
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showProfile">
+  <app-profile-component [name]="gamerTag"></app-profile-component>
+</div>
